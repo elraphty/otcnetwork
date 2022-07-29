@@ -1,0 +1,1 @@
+declare module 'grenache-nodejs-ws';
