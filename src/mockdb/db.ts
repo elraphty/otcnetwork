@@ -1,4 +1,4 @@
-import { Otc } from "../../interfaces";
+import {Otc} from "../../interfaces";
 
 const db: Otc.Db[] = [];
 

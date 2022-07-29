@@ -1,6 +1,6 @@
-const { PeerRPCClient }  = require('grenache-nodejs-ws');
+const {PeerRPCClient} = require('grenache-nodejs-ws');
 const Link = require('grenache-nodejs-link');
-import { grapeUrl } from "./config";
+import {grapeUrl} from "./config";
 
 const link = new Link({
   grape: grapeUrl,
@@ -10,6 +10,7 @@ const link = new Link({
 link.start();
 
 const peer = new PeerRPCClient(link, {});
+
 peer.init();
 
 export default peer;
