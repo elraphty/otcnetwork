@@ -35,3 +35,49 @@
   - First of all run the grape server ``` npm run grape_server ```
   - Then run the grape client ``` npm run grape_client ```
   - Run the API server lastly to make calls to the grape client ``` npm run start ```
+
+## API ROUTES
+
+  - GET /api/v1 = Base route
+  - POST /api/v1/otc = Adds an otc value to and array and returns other otcs that matches if found.
+
+  Request Body
+  
+  ```
+    {
+      "usd": "50000",
+      "btc": "1"
+    }
+  ```
+  Response
+  
+  ```
+    {
+      "msg": "Added otc",
+      "data": {
+        "id": 8166,
+        "usd": "40000",
+        "btc": "1"
+      }
+    }
+    
+    // OR
+    
+    {
+      "msg": "Otc match found",
+      "data": [
+        {
+          "id": 8166,
+          "usd": "40000",
+          "btc": "1"
+        }, 
+        {
+          "id": 8046,
+          "usd": "40000",
+          "btc": "1"
+        },
+      ]
+    }
+    
+  ```
+  
