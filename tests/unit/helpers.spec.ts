@@ -7,7 +7,7 @@ describe('Test helpers', function () {
 
     expect(result).to.be.a('number');
     expect(result.toString().length).to.equal(4);
-    
+
     done();
   });
 });

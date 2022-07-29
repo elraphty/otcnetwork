@@ -35,6 +35,7 @@
   - First of all run the grape server ``` npm run grape_server ```
   - Then run the grape client ``` npm run grape_client ```
   - Run the API server lastly to make calls to the grape client ``` npm run start ```
+  - Run tests with ```npm run test```
 
 ## API ROUTES
 
