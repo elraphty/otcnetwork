@@ -15,7 +15,7 @@ export default class DB {
     /* check if the btc requested and usd value matches 
       else return undefined
      */
-    const match = db.map(pay => {
+    const match = db.filter(pay => {
       if (pay.usd === payload.usd && pay.btc === payload.btc) {
         return pay;
       }

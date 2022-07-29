@@ -13,7 +13,7 @@ export const sendPayload = (payload: Otc.Db, callback: (res: string | Otc.Db) =>
 }
 
 export const randomNumber = (): number => {
-  const number = Math.floor(1000 * Math.random() * 9999);
+  const number = Math.floor(1000 + Math.random() * 9000);
 
   return number;
 }
