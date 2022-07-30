@@ -11,14 +11,12 @@ export const addOtc = async (req: Request, res: Response, next: NextFunction) =>
       return responseErrorValidation(res, 400, errors.array());
     }
 
-    const btc = req.body.btc;
-    const usd = req.body.usd;
+    const order = req.body.order;
     const id = randomNumber();
 
     const payload: Otc.Db = {
       id,
-      usd,
-      btc
+      order
     };
     
     sendPayload(payload, (data: string | Otc.Db) => {

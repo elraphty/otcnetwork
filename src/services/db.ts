@@ -16,7 +16,7 @@ export default class DB {
       else return undefined
      */
     const match = db.filter(pay => {
-      if (pay.usd === payload.usd && pay.btc === payload.btc) {
+      if (pay.order === payload.order) {
         return pay;
       }
     });

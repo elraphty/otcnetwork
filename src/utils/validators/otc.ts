@@ -1,9 +1,9 @@
 import {body} from 'express-validator';
 
-const myWhitelist: string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.';
+const myWhitelist: string = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890$,\/().';
 
 export const addOtcValidator = [
-  body('btc')
+  body('order')
     .not().isEmpty()
     .isString()
     .ltrim()
@@ -11,14 +11,5 @@ export const addOtcValidator = [
     .whitelist(myWhitelist)
     .escape()
     .isLength({min: 1})
-    .withMessage('provide btc value'),
-  body('usd')
-    .not().isEmpty()
-    .isString()
-    .ltrim()
-    .rtrim()
-    .whitelist(myWhitelist)
-    .escape()
-    .isLength({min: 1})
-    .withMessage('Procide usd value'),
+    .withMessage('Can\'t send an empty order'),
 ]
